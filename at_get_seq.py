@@ -29,7 +29,7 @@ def score_intron(model, seq, k, d=5, a=10):
 ime_model = read_model("../imeter/v1/imeter1.model")
 
 min_ime = 70.38 
-keep = {}
+keep    = {}
 
 with gzip.open(sys.argv[1], "rt") as fp:
 	for line in fp.readlines():
@@ -37,7 +37,6 @@ with gzip.open(sys.argv[1], "rt") as fp:
 		id, b, e, s, x, seq = line.split()
 		b = int(b)
 		e = int(e)
-		x = float(x)
 		ime = score_intron(ime_model, seq, 5)
 		if ime < min_ime: continue
 		if seq not in keep: keep[seq] = f">{id}.{b}.{e}"
