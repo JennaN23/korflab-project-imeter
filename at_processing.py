@@ -32,8 +32,8 @@ def read_model(filename):
 
 	for line in fp.readlines():
 		if line.startswith('#'): continue
-		#kmer, imeter, prox, dist = line.split()
-		kmer, imeter = line.split()
+		kmer, imeter, prox, dist = line.split()
+		#kmer, imeter = line.split()
 		model[kmer] = float(imeter)
 
 	return model
@@ -51,7 +51,7 @@ def categorize(bounds, val):
 		if val < b: return i
 	return len(bounds) 
 	
-ime_model = read_model("../../imeter/v1/imeter1.model")
+ime_model = read_model("../imeter/v1/imeter1.model")
 #ime_model = read_model("dm_ime_model")
 
 #get raw counts
