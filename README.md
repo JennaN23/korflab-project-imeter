@@ -6,6 +6,8 @@ Filters data using a minimum IME score threshold. Prints in FASTA format.
   Prints the ID, entropy, and log2 expression score, as well as the categorized intron beginning, length of the intron, and IME scores for *A. thaliana*.
 ### avg_int_length.py
   Prints maximum expression, median intron length, average intron length, nucleotide frequencies, and "bins" showing the distribution of log2 expression scores.
+### dm_get_100_seq.py
+  Filters data using a minimum IME threshold. Prints in FASTA format.
 ### dm_processing.py
   Prints the ID and log2 expression score, as well as the categorized intron beginning, length of the intron, and IME scores for *D. melanogaster*.
 ### cluster.py
